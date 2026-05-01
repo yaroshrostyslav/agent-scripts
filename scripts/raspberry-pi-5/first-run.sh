@@ -25,10 +25,16 @@ else
     echo "dtparam=pciex1_gen=3" | sudo tee -a "$CONFIG" > /dev/null
     echo -e "${GREEN}Done.${NC}"
 fi
-
 echo ""
 echo "After reboot, run to verify: sudo lspci -vv | grep -i \"LnkSta:\""
 echo ""
+
+# Step 2: Enable SSH
+echo -e "${YELLOW}[2] Enabling SSH...${NC}"
+sudo systemctl enable ssh
+sudo systemctl start ssh
+echo -e "${GREEN}Done.${NC}"
+
 echo -e "${GREEN}=== Setup complete! Rebooting in 15 seconds... ===${NC}"
 echo "Press Ctrl+C to cancel."
 sleep 15
