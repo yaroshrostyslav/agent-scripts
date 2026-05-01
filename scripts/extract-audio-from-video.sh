@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Requires: brew install ffmpeg
 # Description: Simple script to extract audio (mp3) from video on macOS
+# Requires: brew install ffmpeg
 # Usage: ./extract_audio.sh <video-file> [output-dir]
 
 # Check if ffmpeg is installed
