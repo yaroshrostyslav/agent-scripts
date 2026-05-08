@@ -9,7 +9,7 @@ set -euo pipefail
 sudo apt update && sudo apt install -y build-essential git cmake pkg-config libcurl4-openssl-dev
 
 # 2. Build BLIS (BLIS outperforms OpenBLAS on Pi 5)
-git clone https://github.com/flame/blis
+[[ ! -d blis ]] && git clone https://github.com/flame/blis
 (
   cd blis
   CFLAGS="-O3 -mcpu=cortex-a76" ./configure --enable-cblas -t openmp,pthreads auto
@@ -18,7 +18,7 @@ git clone https://github.com/flame/blis
 )
 
 # 3. Clone and build llama.cpp
-git clone https://github.com/ggml-org/llama.cpp
+[[ ! -d llama.cpp ]] && git clone https://github.com/ggml-org/llama.cpp
 (
   cd llama.cpp
   # GGML_BLAS=ON: enables BLAS acceleration
