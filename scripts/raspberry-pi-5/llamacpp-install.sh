@@ -34,5 +34,9 @@ git clone https://github.com/ggml-org/llama.cpp
   cmake --build build --config Release -j"$(nproc)"
 )
 
-# 4. Validate
-llama.cpp/build/bin/llama-cli --version
+# 4. Install binaries globally
+sudo ln -sf "$(pwd)/llama.cpp/build/bin/llama-server" /usr/local/bin/llama-server
+sudo ln -sf "$(pwd)/llama.cpp/build/bin/llama-cli" /usr/local/bin/llama-cli
+
+# 5. Validate
+llama-cli --version
