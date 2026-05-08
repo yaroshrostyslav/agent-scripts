@@ -29,8 +29,14 @@ echo ""
 echo "After reboot, run to verify: sudo lspci -vv | grep -i \"LnkSta:\""
 echo ""
 
-# Step 2: Enable SSH
-echo -e "${YELLOW}[2] Enabling SSH...${NC}"
+# Step 2: Install git
+echo -e "${YELLOW}[2] Installing git...${NC}"
+sudo apt update && sudo apt install -y git
+echo -e "${GREEN}Done.${NC}"
+echo ""
+
+# Step 3: Enable SSH
+echo -e "${YELLOW}[3] Enabling SSH...${NC}"
 sudo systemctl enable ssh
 sudo systemctl start ssh
 echo -e "${GREEN}Done.${NC}"
