@@ -18,7 +18,7 @@ llama-server \
     -m "$LLAMACPP_DIR/models/gemma-4-E4B-it-Q4_K_M.gguf" \
     --host 0.0.0.0 \
     --port 8080 \
-    --ctx-size 8192 \
+    --ctx-size 16384 \
     --threads 3 \
     --threads-batch "$(nproc)" \
     --mlock \
