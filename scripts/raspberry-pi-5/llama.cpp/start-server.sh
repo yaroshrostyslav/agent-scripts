@@ -16,6 +16,7 @@ BLIS_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
 taskset -c 0-2 \
 llama-server \
     -m "$LLAMACPP_DIR/models/gemma-4-E4B-it-Q4_K_M.gguf" \
+    --mmproj "$LLAMACPP_DIR/models/mmproj-gemma-4-E4B-it-Q8_0.gguf" \
     --host 0.0.0.0 \
     --port 8080 \
     --ctx-size 16384 \
