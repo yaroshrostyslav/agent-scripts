@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description: Install llama.cpp with BLIS on Raspberry Pi 5
-# Run as: bash llamacpp-install.sh
+# Run as: bash install.sh
 
 set -euo pipefail
 

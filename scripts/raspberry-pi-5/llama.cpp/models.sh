@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Description: Download GGUF models into llama.cpp models directory
-# Run as: bash llamacpp-models.sh
+# Run as: bash models.sh
 
 # 1. Detect llama.cpp path via llama-cli symlink
 LLAMACPP_BIN=$(dirname "$(readlink -f "$(which llama-cli)")")
