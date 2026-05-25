@@ -5,6 +5,8 @@
 
 set -euo pipefail
 
+echo "Downloading models..."
+
 # 1. Detect TTS install dir via tts symlink
 TTS_DIR=$(dirname "$(readlink -f "$(which tts)")")
 MODELS_DIR="$TTS_DIR/models"
