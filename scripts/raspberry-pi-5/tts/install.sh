@@ -36,13 +36,3 @@ sudo ln -sf "$(pwd)/tts/say.sh" /usr/local/bin/tts
 
 # 4. Validate
 tts --help
-
-echo
-echo "Installation complete in: $(pwd)/tts"
-echo "Manual steps remaining:"
-echo "  1. Reboot to activate pipewire: sudo reboot"
-echo "  2. Pair Bluetooth speaker (bluetoothctl)"
-echo "  3. Set default audio sink:"
-echo "       pactl list short sinks"
-echo "       pactl set-default-sink <sink_name>"
-echo "       paplay /usr/share/sounds/alsa/Front_Center.wav"
