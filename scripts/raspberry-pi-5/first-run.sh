@@ -3,6 +3,8 @@
 # Description: First-run setup script for Raspberry Pi 5
 # Run as: bash first-run.sh
 
+set -euo pipefail
+
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
@@ -29,9 +31,9 @@ echo ""
 echo "After reboot, run to verify: sudo lspci -vv | grep -i \"LnkSta:\""
 echo ""
 
-# Step 2: Install git
-echo -e "${YELLOW}[2] Installing git...${NC}"
-sudo apt update && sudo apt install -y git
+# Step 2: Install packages
+echo -e "${YELLOW}[2] Installing packages...${NC}"
+sudo apt update && sudo apt install -y git btop mpg123 ffmpeg
 echo -e "${GREEN}Done.${NC}"
 echo ""
 
