@@ -43,7 +43,4 @@ sudo systemctl enable ssh
 sudo systemctl start ssh
 echo -e "${GREEN}Done.${NC}"
 
-echo -e "${GREEN}=== Setup complete! Rebooting in 15 seconds... ===${NC}"
-echo "Press Ctrl+C to cancel."
-sleep 15
-sudo reboot
+echo -e "${GREEN}=== Setup complete! ===${NC}"
