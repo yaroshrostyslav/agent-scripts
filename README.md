@@ -8,12 +8,12 @@ Setup and utility scripts for Raspberry Pi 5.
 
 **1. First run** — enables PCIe 3.0, installs git, enables SSH, then reboots:
 ```bash
+cd ~/sources/
 bash scripts/raspberry-pi-5/first-run.sh
 ```
 
 **2. llama.cpp setup** — run from the directory where you want `blis/` and `llama.cpp/` cloned:
 ```bash
-cd ~/sources/
 bash agent-scripts/scripts/raspberry-pi-5/llama.cpp/setup.sh
 ```
 
