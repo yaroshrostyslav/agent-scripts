@@ -76,4 +76,24 @@ echo ""
 echo "node $(node --version) / npm $(npm --version) / pm2 $(pm2 --version)"
 echo ""
 
+# Step 5: Install PHP 8.4 CLI
+#         Trixie ships 8.4 in the stock repos, so no third-party repo is needed
+#         (unlike Node, where Debian only has 20.x and NodeSource was required)
+echo -e "${YELLOW}[5] Installing PHP 8.4 CLI...${NC}"
+sudo apt install -y \
+    php8.4-cli \
+    php8.4-curl \
+    php8.4-mbstring \
+    php8.4-xml \
+    php8.4-zip \
+    php8.4-bcmath \
+    php8.4-intl \
+    php8.4-sqlite3 \
+    php8.4-opcache
+echo -e "${GREEN}Done.${NC}"
+echo ""
+echo "$(php -v | head -1)"
+echo "php binary: $(command -v php)"
+echo ""
+
 echo -e "${GREEN}=== Setup complete! ===${NC}"
