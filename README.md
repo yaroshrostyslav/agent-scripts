@@ -6,7 +6,7 @@ Setup and utility scripts for Raspberry Pi 5.
 
 ### Usage
 
-**1. First run** — enables PCIe 3.0, installs git, enables SSH, then reboots:
+**1. First run** — enables PCIe 3.0, installs base packages, enables SSH, installs Node.js + PM2:
 ```bash
 cd ~/sources/
 bash scripts/raspberry-pi-5/first-run.sh
